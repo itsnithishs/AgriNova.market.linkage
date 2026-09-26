@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#184E38">
+  <meta name="description" content="AgriNova — Farmer-First Market Intelligence and Direct Buyer Linkage Platform. Know the price, compare nearby mandis, understand price trends, calculate transport-aware net value, and connect with verified buyers.">
+  <title>AgriNova | Strengthening Market Linkages & Price Discovery</title>
+
+  <!-- Google Fonts: Newsreader / Inter for refined agricultural fintech editorial feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Design System & Components CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <link rel="stylesheet" href="./css/market.css">
+  <link rel="stylesheet" href="./css/sections.css">
+  <link rel="stylesheet" href="./css/assistant.css">
+
+  <style>
+    /* Prevent FOUC */
+    #app:empty {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #F9FAF6;
+    }
+    .initial-loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      font-family: -apple-system, sans-serif;
+      color: #184E38;
+      font-weight: 600;
+    }
+    .initial-spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid #E2E8DF;
+      border-top-color: #184E38;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Root Application Mount Point -->
+  <div id="app">
+    <div class="initial-loader">
+      <div class="initial-spinner"></div>
+      <span>Initializing AgriNova Market Platform...</span>
+    </div>
+  </div>
+
+  <noscript>
+    <div style="padding: 30px; text-align: center; font-family: sans-serif; background: #fff3cd; color: #856404;">
+      <h2>JavaScript Required</h2>
+      <p>AgriNova requires JavaScript to calculate real-time mandi transport net returns and display interactive price graphs.</p>
+    </div>
+  </noscript>
+
+  <!-- Main ES Module Application Entrypoint -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

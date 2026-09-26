@@ -1,0 +1,246 @@
+/* ==========================================================================
+   AGRINOVA PLATFORM - ASSISTANT DRAWER STYLING
+   Contextual AI Decision Support (Requirements 56–58)
+   ========================================================================== */
+
+.assistant-drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 40, 30, 0.45);
+  backdrop-filter: blur(3px);
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.assistant-drawer-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.assistant-drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 440px;
+  height: 100%;
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.assistant-drawer-backdrop.open .assistant-drawer-panel {
+  transform: translateX(0);
+}
+
+/* Header */
+.assistant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(135deg, var(--color-primary-800), var(--color-primary-900));
+  color: #FFFFFF;
+}
+
+.assistant-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.assistant-bot-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assistant-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.assistant-subtitle {
+  font-size: 0.72rem;
+  color: var(--color-accent-400);
+}
+
+.btn-icon-close {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Context Badge */
+.assistant-context-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-primary-50);
+  border-bottom: 1px solid var(--color-primary-100);
+  padding: 8px var(--spacing-lg);
+  font-size: 0.78rem;
+  color: var(--color-primary-900);
+}
+
+/* Chat Body */
+.assistant-chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background-color: var(--color-bg-canvas);
+}
+
+.chat-message-bubble {
+  max-width: 86%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.chat-message-bubble.system {
+  align-self: flex-start;
+}
+
+.chat-message-bubble.user {
+  align-self: flex-end;
+}
+
+.msg-sender-tag {
+  font-size: 0.68rem;
+  color: var(--color-text-subtle);
+  margin-bottom: 3px;
+}
+
+.chat-message-bubble.user .msg-sender-tag {
+  text-align: right;
+}
+
+.msg-text {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.chat-message-bubble.system .msg-text {
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  border-bottom-left-radius: 2px;
+  box-shadow: var(--shadow-xs);
+}
+
+.chat-message-bubble.user .msg-text {
+  background-color: var(--color-primary-600);
+  color: #FFFFFF;
+  border-bottom-right-radius: 2px;
+}
+
+/* Quick Prompts Chips */
+.assistant-quick-prompts {
+  padding: 10px var(--spacing-lg);
+  background-color: #FFFFFF;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.prompts-kicker {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.quick-chips-scroll {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.quick-chip-btn {
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary-800);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.quick-chip-btn:hover {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-600);
+}
+
+/* Input Form */
+.assistant-input-bar {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: #FFFFFF;
+  border-top: 1px solid var(--color-border);
+}
+
+.assistant-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assistant-text-input {
+  flex: 1;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  outline: none;
+  background-color: var(--color-bg-subtle);
+  transition: border-color 0.15s ease;
+}
+
+.assistant-text-input:focus {
+  border-color: var(--color-primary-600);
+  background-color: #FFFFFF;
+}
+
+.btn-icon-submit {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.assistant-safety-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  color: var(--color-text-subtle);
+  margin-top: 6px;
+  line-height: 1.25;
+}

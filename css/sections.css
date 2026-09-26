@@ -1,0 +1,1730 @@
+/* ==========================================================================
+   AGRINOVA PLATFORM - SECTIONS STYLING
+   Dashboard, Sell, Farm, FarmCare, Money, Profile & Settings (Req 10–17, 35–71)
+   ========================================================================== */
+
+/* ==========================================================================
+   DASHBOARD SECTION (Requirements 10–17)
+   ========================================================================== */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.dashboard-greeting-bar {
+  background: linear-gradient(135deg, var(--color-primary-800), var(--color-primary-900));
+  color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.greeting-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-accent-400);
+}
+
+.greeting-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin-top: 2px;
+}
+
+.greeting-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Farm Snapshot Strip (Requirement 11) */
+.farm-snapshot-strip {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px var(--spacing-lg);
+  box-shadow: var(--shadow-xs);
+}
+
+.snapshot-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.snap-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.snap-val {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.snap-val.highlight {
+  color: var(--color-accent-600);
+}
+
+.snap-hint {
+  font-size: 0.74rem;
+  color: var(--color-text-subtle);
+}
+
+.snapshot-divider {
+  width: 1px;
+  height: 36px;
+  background-color: var(--color-border);
+}
+
+/* Dashboard Main Grid: 1.8fr Left / 1fr Right */
+.dashboard-main-grid {
+  display: grid;
+  grid-template-columns: 1.85fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.dashboard-left-col, .dashboard-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Today's Market Hero Card (Requirement 12: Most visually important) */
+.todays-market-hero-card {
+  border-left: 6px solid var(--color-primary-600);
+  box-shadow: var(--shadow-sm);
+}
+
+.market-hero-price-strip {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.commodity-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.commodity-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.commodity-mandi {
+  font-size: 0.85rem;
+  color: var(--color-text-subtle);
+}
+
+.price-mega-block {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.price-mega-block .price-val {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.price-mega-block .currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-700);
+}
+
+.price-mega-block .number {
+  font-size: 2.85rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+  line-height: 1;
+}
+
+.price-mega-block .unit {
+  font-size: 1rem;
+  color: var(--color-text-subtle);
+}
+
+.market-metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: var(--spacing-md);
+}
+
+.metric-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.72rem;
+  color: var(--color-text-subtle);
+}
+
+.metric-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.metric-col.modal-highlight .metric-value {
+  color: var(--color-primary-700);
+  font-weight: 800;
+}
+
+.hero-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: var(--spacing-sm);
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.market-quick-insight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--color-text-body);
+}
+
+/* Market Opportunity Card (Requirement 13) */
+.market-opportunity-card {
+  background: #FCFDFC;
+  border: 1px solid #DCE6DC;
+  border-left: 5px solid var(--color-accent-500);
+}
+
+.opp-badge-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-600);
+  margin-bottom: 6px;
+}
+
+.opp-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.opp-mandi-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.opp-mandi-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+  margin-top: 2px;
+}
+
+.opp-gross-rate {
+  font-weight: 700;
+  color: var(--color-primary-900);
+}
+
+.opp-net-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: var(--color-primary-50);
+  border: 1px solid var(--color-primary-100);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.opp-net-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary-800);
+}
+
+.opp-net-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-primary-800);
+}
+
+.opp-diff {
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.opp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: var(--spacing-xs);
+  gap: var(--spacing-sm);
+}
+
+.opp-explanation {
+  font-size: 0.82rem;
+  color: var(--color-text-body);
+}
+
+/* Tasks Card (Requirement 14) */
+.task-compact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-compact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.task-compact-item:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.task-check-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.task-check-circle.checked {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  color: #FFFFFF;
+}
+
+.task-compact-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.task-compact-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.task-compact-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  color: var(--color-text-subtle);
+}
+
+.task-badge-cat {
+  color: var(--color-primary-700);
+  font-weight: 600;
+}
+
+/* Weather Card (Requirement 15) */
+.weather-temp-badge {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+  background-color: var(--color-bg-subtle);
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.weather-row-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.weather-cond-chip, .weather-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--color-text-body);
+}
+
+.agri-implication-box {
+  background-color: var(--color-accent-100);
+  border: 1px solid #FCD34D;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.implication-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--color-accent-600);
+  margin-bottom: 2px;
+}
+
+.implication-text {
+  font-size: 0.82rem;
+  color: #78350F;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* Farm Health Card (Requirement 16) */
+.health-score-display {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.score-large {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-primary-800);
+  line-height: 1;
+}
+
+.score-base {
+  font-size: 0.85rem;
+  color: var(--color-text-subtle);
+}
+
+.health-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.health-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.health-meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.76rem;
+}
+
+.health-item-name {
+  color: var(--color-text-body);
+  font-weight: 600;
+}
+
+.health-item-score {
+  color: var(--color-text-subtle);
+}
+
+.health-progress-track {
+  height: 5px;
+  background-color: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.health-progress-fill {
+  height: 100%;
+  background-color: var(--color-primary-600);
+  border-radius: 4px;
+}
+
+.health-item-status {
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+}
+
+/* Activity Feed (Requirement 17) */
+.activity-feed-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.activity-feed-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.activity-feed-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activity-icon-bubble {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.act-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.act-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-900);
+}
+
+.act-time {
+  font-size: 0.72rem;
+  color: var(--color-text-subtle);
+}
+
+.act-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-subtle);
+  margin-top: 1px;
+}
+
+/* ==========================================================================
+   SELL TO BUYERS VIEW (Requirements 35–40, 78)
+   ========================================================================== */
+
+.sell-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.sell-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.readiness-checklist-strip {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px var(--spacing-lg);
+  box-shadow: var(--shadow-xs);
+}
+
+.readiness-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.readiness-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.readiness-items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.readiness-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+}
+
+.readiness-item.checked {
+  color: var(--color-primary-800);
+  font-weight: 600;
+}
+
+/* Produce Listing & Timeline (Requirement 40) */
+.listing-timeline-wrap {
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-sm) 0;
+}
+
+.timeline-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.timeline-bar::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background-color: var(--color-border);
+  z-index: 1;
+}
+
+.timeline-node {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.node-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-subtle);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-node.done .node-circle {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  color: #FFFFFF;
+}
+
+.timeline-node.current .node-circle {
+  border-color: var(--color-accent-500);
+  color: var(--color-accent-500);
+  box-shadow: 0 0 0 3px var(--color-accent-100);
+}
+
+.node-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-subtle);
+}
+
+.timeline-node.done .node-label {
+  color: var(--color-primary-900);
+}
+
+.listing-quick-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+.l-metric-lbl {
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  display: block;
+}
+
+.l-metric-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+}
+
+.l-metric-val.highlight {
+  color: var(--color-accent-600);
+}
+
+/* Offers Grid */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.offer-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-card.confirmed {
+  border-color: var(--color-positive);
+  background-color: #F8FCF8;
+}
+
+.offer-card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.offer-buyer-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+}
+
+.offer-pickup-tag {
+  font-size: 0.74rem;
+  color: var(--color-text-subtle);
+  display: block;
+}
+
+.offer-price-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.offer-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  background-color: var(--color-bg-subtle);
+  padding: 10px;
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.o-spec {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.o-spec.highlight {
+  border-top: 1px solid var(--color-border);
+  padding-top: 6px;
+  margin-top: 2px;
+}
+
+.offer-terms-block {
+  font-size: 0.78rem;
+  color: var(--color-text-body);
+  margin-bottom: var(--spacing-md);
+  flex: 1;
+}
+
+.terms-title {
+  font-weight: 700;
+  color: var(--color-primary-900);
+}
+
+.notes-text {
+  font-style: italic;
+  color: var(--color-text-subtle);
+  display: block;
+  margin-top: 2px;
+}
+
+.offer-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 10px;
+}
+
+.sale-confirmed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-positive);
+  background-color: var(--color-positive-bg);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+/* Buyer Match Cards (Requirement 37 & 38) */
+.buyers-catalog-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.buyer-match-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-lg);
+  box-shadow: var(--shadow-xs);
+}
+
+.buyer-company-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.buyer-header-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.buyer-sub-meta {
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+  margin-top: 2px;
+}
+
+.buyer-requirement-box {
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-xs);
+  padding: 6px 10px;
+  margin: 8px 0;
+  font-size: 0.8rem;
+}
+
+.why-match-accordion {
+  border-left: 3px solid var(--color-primary-600);
+  background-color: var(--color-primary-50);
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  margin-top: 6px;
+}
+
+.why-match-label {
+  font-size: 0.78rem;
+  color: var(--color-primary-900);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.why-match-list {
+  list-style: disc;
+  padding-left: 18px;
+  font-size: 0.76rem;
+  color: var(--color-primary-900);
+  margin-top: 4px;
+}
+
+.buyer-commercial-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.buyer-offer-badge {
+  text-align: right;
+  margin: 6px 0;
+}
+
+.b-offer-lbl {
+  font-size: 0.68rem;
+  color: var(--color-text-subtle);
+  display: block;
+}
+
+.b-offer-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.b-offer-diff {
+  font-size: 0.78rem;
+  color: var(--color-accent-600);
+  display: block;
+}
+
+.buyer-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   FARM VIEW (Requirements 41–44)
+   ========================================================================== */
+
+.farm-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.farm-overview-card {
+  padding: var(--spacing-lg);
+}
+
+.farm-overview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.farmer-id-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-primary-700);
+  color: #FFFFFF;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.farm-owner-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.farm-location-sub {
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+}
+
+.kyc-verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-primary-800);
+  background-color: var(--color-primary-50);
+  border: 1px solid var(--color-primary-100);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.farm-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.f-stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-lbl {
+  font-size: 0.72rem;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+}
+
+.f-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.f-sub {
+  font-size: 0.74rem;
+  color: var(--color-text-subtle);
+}
+
+/* Harvest Timeline (Requirement 75) */
+.h-timeline-stages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.h-stage {
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.h-stage.completed {
+  border-color: var(--color-primary-600);
+  background-color: var(--color-primary-50);
+}
+
+.h-stage.in-progress {
+  border-color: var(--color-accent-500);
+  background-color: #FFFDF9;
+}
+
+.h-marker {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-primary-600);
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+  margin-top: 4px;
+}
+
+.h-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent-600);
+}
+
+.h-note {
+  font-size: 0.74rem;
+  color: var(--color-text-subtle);
+}
+
+/* Crops List */
+.crops-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.crop-detail-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.crop-detail-card.selected-crop {
+  border-color: var(--color-primary-600);
+  box-shadow: 0 0 0 2px var(--color-primary-100);
+}
+
+.crop-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crop-name-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.active-focus-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-primary-800);
+  background-color: var(--color-primary-50);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.crop-variety-sub {
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+}
+
+.crop-health-score {
+  text-align: right;
+}
+
+.crop-cycle-strip {
+  margin: 4px 0;
+}
+
+.cycle-bar-track {
+  height: 6px;
+  background-color: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cycle-bar-fill {
+  height: 100%;
+  background-color: var(--color-primary-600);
+}
+
+.cycle-dates-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.74rem;
+  color: var(--color-text-subtle);
+  margin-top: 4px;
+}
+
+.crop-specs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background-color: var(--color-bg-subtle);
+  padding: 8px;
+  border-radius: var(--radius-xs);
+}
+
+.c-spec {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-lbl {
+  font-size: 0.68rem;
+  color: var(--color-text-subtle);
+}
+
+.c-val {
+  font-size: 0.85rem;
+}
+
+.crop-actions-row {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.pref-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.pref-item {
+  background-color: var(--color-bg-subtle);
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+}
+
+.pref-lbl {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  display: block;
+}
+
+.pref-val {
+  font-size: 0.84rem;
+  color: var(--color-primary-900);
+}
+
+/* ==========================================================================
+   FARMCARE VIEW (Requirements 45–48)
+   ========================================================================== */
+
+.farmcare-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.farmcare-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: var(--spacing-lg);
+}
+
+.health-components-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+  margin: var(--spacing-sm) 0;
+}
+
+.h-comp-box {
+  background-color: var(--color-bg-subtle);
+  padding: 10px;
+  border-radius: var(--radius-xs);
+}
+
+.h-comp-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  margin-bottom: 4px;
+}
+
+.health-advisory-note {
+  font-size: 0.76rem;
+  color: var(--color-text-subtle);
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+/* Weather Matrix (Requirement 47) */
+.weather-temp-large {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+}
+
+.weather-forecast-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  text-align: center;
+  background-color: var(--color-bg-subtle);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  margin: var(--spacing-sm) 0;
+}
+
+.forecast-day-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.f-day { font-size: 0.76rem; font-weight: 700; color: var(--color-primary-900); }
+.f-temps { font-size: 0.78rem; font-weight: 600; }
+
+.impact-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.impact-pillar {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  padding: 8px 10px;
+}
+
+.pillar-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-primary-800);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+.pillar-text {
+  font-size: 0.78rem;
+  color: var(--color-text-body);
+  line-height: 1.35;
+}
+
+/* Tasks Full List (Requirement 48) */
+.tasks-full-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.task-full-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 12px var(--spacing-md);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.task-full-row.task-done {
+  background-color: var(--color-bg-subtle);
+  opacity: 0.75;
+}
+
+.task-square-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.task-square-check.checked {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  color: #FFFFFF;
+}
+
+.task-main-col {
+  flex: 1;
+}
+
+.task-title-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.task-full-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+}
+
+.task-category-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-accent-600);
+  background-color: var(--color-accent-100);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.task-crop-tag {
+  font-size: 0.68rem;
+  color: var(--color-text-subtle);
+}
+
+.task-instructions {
+  font-size: 0.82rem;
+  color: var(--color-text-body);
+  margin: 3px 0;
+}
+
+.task-meta-line {
+  font-size: 0.74rem;
+  color: var(--color-text-subtle);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.urgency-tag.high { color: var(--color-negative); font-weight: 700; }
+.urgency-tag.medium { color: var(--color-attention); font-weight: 600; }
+
+/* ==========================================================================
+   MONEY VIEW (Requirements 49–52)
+   ========================================================================== */
+
+.money-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.finance-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.f-metric-card {
+  padding: var(--spacing-md);
+}
+
+.f-metric-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+}
+
+.f-metric-figure {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin: 4px 0;
+}
+
+.f-metric-figure .curr {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.f-metric-figure .amt {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.f-metric-card.highlight-green {
+  border-left: 4px solid var(--color-positive);
+}
+
+.f-metric-card.highlight-amber {
+  border-left: 4px solid var(--color-attention);
+}
+
+.finance-summary-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.security-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.sec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sec-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+  display: block;
+}
+
+.badge-payment {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.badge-payment.done {
+  background-color: var(--color-positive-bg);
+  color: var(--color-positive);
+}
+
+.badge-payment.pending {
+  background-color: var(--color-attention-bg);
+  color: var(--color-attention);
+}
+
+/* ==========================================================================
+   SUPPORT & SETTINGS VIEWS
+   ========================================================================== */
+
+.support-view-container, .profile-view-container, .settings-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.schemes-catalog-grid, .financial-services-grid, .knowledge-cards-grid, .help-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.scheme-card, .fin-card, .kb-card, .help-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scheme-cat-pill, .kb-cat-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-accent-600);
+  text-transform: uppercase;
+}
+
+.scheme-title, .fin-title, .kb-title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+  margin-top: 2px;
+}
+
+.badge-official {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-primary-700);
+  background-color: var(--color-primary-50);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.s-lbl, .f-lbl {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  display: block;
+}
+
+.s-benefit-text, .s-eligibility-text, .f-benefit-text, .f-guidance-text {
+  font-size: 0.84rem;
+  color: var(--color-text-body);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.scheme-status-strip {
+  background-color: var(--color-bg-subtle);
+  padding: 6px 10px;
+  border-radius: var(--radius-xs);
+  margin-top: 8px;
+}
+
+.scheme-footer, .fin-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 10px;
+  margin-top: var(--spacing-sm);
+}
+
+/* Language Selection Grid (Requirement 64) */
+.language-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.lang-card-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.lang-card-option:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.lang-card-option.selected {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-600);
+}
+
+.lang-check-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-card-option.selected .lang-check-circle {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  color: #FFFFFF;
+}
+
+.lang-native { font-size: 0.95rem; color: var(--color-primary-900); }
+
+/* Details Grid */
+.details-grid-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.detail-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+}
+
+.d-val {
+  font-size: 0.95rem;
+  color: var(--color-primary-900);
+}
+
+.bank-security-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: var(--color-text-subtle);
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+/* Documents Grid */
+.documents-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.doc-item-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+.doc-meta { flex: 1; }
+.doc-title { font-size: 0.88rem; font-weight: 700; color: var(--color-primary-900); }
+.doc-status-badge { font-size: 0.72rem; font-weight: 700; }
+
+/* Security Rows */
+.security-controls-list, .login-history-list, .notification-toggles-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.sec-row, .notif-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.login-sess-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-xs);
+}
+
+.sess-info { flex: 1; }
+.sess-device { font-size: 0.85rem; color: var(--color-primary-900); }
+.current-session-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-positive);
+  background-color: var(--color-positive-bg);
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  margin-left: 6px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .farm-snapshot-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .snapshot-divider {
+    display: none;
+  }
+
+  .farmcare-top-grid, .finance-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .finance-metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .buyer-match-card {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-commercial-col {
+    align-items: flex-start;
+    margin-top: var(--spacing-sm);
+  }
+
+  .readiness-items-grid, .h-timeline-stages, .details-grid-two-col, .pref-items-grid {
+    grid-template-columns: 1fr;
+  }
+}
